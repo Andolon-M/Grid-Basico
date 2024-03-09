@@ -1,0 +1,488 @@
+@import url(variables.css);
+
+body {
+    background: var(--color-primary);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-gap: 8px;
+
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+        "menu menu menu menu menu menu menu menu menu menu menu menu"
+        "notificatins notificatins notificatins notificatins sales sales sales sales sales balance balance balance"
+        "notificatins notificatins notificatins notificatins sales sales sales sales sales balance balance balance"
+        "week week week week sales sales sales sales sales balance balance balance "
+        "week week week week sales sales sales sales sales calendar calendar calendar "
+        "week week week week sales sales sales sales sales calendar calendar calendar "
+        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline timeline"
+        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline timeline"
+        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline timeline"
+
+    ;
+
+    width: 850px;
+    height: 550px;
+    margin: 15px auto;
+    background: var(--color-principal);
+    border-radius: 1px solid var(--color-principal);
+    border-radius: 5px;
+    box-shadow: var(--color-principal);
+}
+.container > div {
+    border-radius: 8px;
+    background: var(--color-secundary);
+}
+
+.item_1 {
+   
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.item_1 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.item_1 div ul {
+    display: flex;
+    gap: 1em;
+    padding: 0 20px;
+    width: max-content;
+
+}
+.item_1 div ul li {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.item_1 div ul li input {
+    list-style: none;
+    width: 7em;
+    padding: 5px;
+    
+    border-radius: 5px;
+    border: none;
+    background: var(--color-primary);
+
+}
+.search-container {
+    position: relative;
+}
+.campobusqueda[type="text"] {
+    padding-right: 30px; /* Ajusta el espacio para el icono */
+}
+.lupa {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Ajusta la posición del icono */
+    transform: translateY(-50%);
+}
+.item_1 div:last-child {
+    background:  linear-gradient(90deg, rgb(139 216 241), rgb(211 235 99));
+    
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.item_1 div:last-child div {
+    padding: 0 17px;
+    width: max-content;
+    background: none;
+}
+.item_1 div:last-child ul li ion-icon{
+    font-size: 1.3em;
+}
+.item_1 div:last-child div div{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: max-content;
+    margin: 0 5px;
+}
+.item_1 div:last-child div div h1 {
+    font-size: 1em;
+    text-transform: capitalize;
+    margin-bottom: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.item_1 div:last-child div div small {
+    font-size: 0.6em;
+    margin-bottom: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+
+
+
+.item_2 { 
+    background: rgb(134 215 248) !important;
+    grid-area: notificatins;
+    overflow: hidden;
+    flex: flex;
+    padding: 8px 20px;
+    object-fit: fill;
+}
+.container__item_2 {
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+    grid-template-rows: 18% auto 62%;
+    grid-template-areas:
+        "hora . menu "
+        "titulo . ."
+        "fotos notificaciones notificaciones ";
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+.item-2-hora{
+    grid-area: hora;
+    background: transparent;
+}
+.item-2-hora p{
+    font-size: 0.7em;
+    margin-bottom:  0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.item-2-titulo{
+    grid-area: titulo;
+    background: transparent;
+}
+.item-2-titulo h1{
+    font-size: 0.8em;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.item-2-fotos{
+    grid-area: fotos;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: cestartnter;
+}
+.item-2-fotos div{
+    font-size: 0.1em;
+    width: 35px;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+    
+    border-radius: 100%;
+    
+}
+.foto1 {
+    background: rgb(236, 227, 92);
+    z-index: 1;
+    
+}
+.foto2 {
+    background: rgb(209, 200, 70);
+    z-index: 2;
+}
+.foto3 {
+    background: black;
+    z-index: 3;
+}
+.item-2-menu{
+    grid-area: menu;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+.item-2-notificaciones{
+    grid-area: notificaciones;
+    background: transparent;
+    display: flex;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    justify-content: end;
+}
+.item-2-notificaciones p{
+    font-size: 0.8em;
+    height: 35px;
+    width: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+    background: black;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.item_3 {
+    background: orange;
+    grid-area: sales;
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+   
+    padding: 10px 20px;
+    object-fit: fill;
+}
+.titulo__ventas {
+    font-size: 1.3em;
+    text-transform: capitalize;
+    margin-bottom: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item_3_año {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.item_3 div h2{
+    font-size: 1.4rem;
+}
+.item_3 div p{
+    font-size: 0.9rem;
+}
+.item_3 div h2,
+.item_3 div p{
+    color :gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.saldo {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.estado {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    font-family: Arial, Helvetica, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 196, 0);
+
+}
+.estado ion-icon{
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+.item_3__balance{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 1.5fr 2fr 1.3fr 0.8fr 1.3fr;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+    "sunday monday tuesday wednesday thursday friday saturday"
+
+    ;
+}
+
+.sunday {
+    grid-area: sunday;
+    
+}
+.sunday div{
+   background: rgb(183 251 200);;
+   
+}
+.monday {
+    grid-area: monday;
+}
+.monday div{
+    background: #88EA88;
+    
+ }
+.tuesday {
+    grid-area: tuesday;
+}
+.tuesday div{
+    background: #D7F065;
+}
+.wednesday {
+    grid-area: wednesday;
+}
+.wednesday div{
+    background: #87D8F9;
+}
+.thursday {
+    grid-area: thursday;
+}
+.thursday div{
+    background: #CFEE75;
+}
+.friday {
+    grid-area: friday;
+}
+.friday div{
+    background: black;
+}
+.saturday {
+    grid-area: saturday;
+}
+.saturday div{
+    background: #CFEE75;
+}
+
+.sunday,
+.monday,
+.tuesday,
+.wednesday,
+.thursday,
+.friday,
+.saturday {
+   
+    
+    object-fit: contain;
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 20px;
+    flex-direction: row;
+    
+    align-content: space-between; /* Espacio entre los contenedores */
+}
+
+.sunday div,
+.monday div,
+.tuesday div,
+.wednesday div,
+.thursday div,
+.friday div,
+.saturday div{
+    width: 100%;
+    height: 50%;
+}
+
+.sunday h3,
+.monday h3,
+.tuesday h3,
+.wednesday h3,
+.thursday h3,
+.friday h3,
+.saturday h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.6em;
+    color: #333; /* Color del texto */
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px ;
+    text-transform: capitalize;
+    font-weight: lighter;
+}
+
+.date_sales{
+    width: 100;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    color :gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 0.7rem;
+    margin-top: 15px;
+    margin-bottom: 0px;
+
+}
+
+.item_4 {
+    padding: 5px;
+    background: pink;
+    grid-area: balance;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    "sub_item1"
+    "sub_item2"
+    "sub_item3"
+    ;
+}
+.item_4 div{
+    padding: 5px 10px;
+}
+
+.sub_item1{
+    grid-area: sub_item1;
+    display: flex;
+    flex-direction: column;
+
+}
+.sub_item2{
+    grid-area: sub_item2;
+    display: flex;
+    flex-direction: column;
+    background: #BCE897;
+    border-radius: 8px;
+}
+.sub_item3{
+    grid-area: sub_item3;
+    display: flex;
+    flex-direction: column; 
+}
+
+.sub_item1 h1,
+.sub_item2 h1,
+.sub_item3 h1 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 4px 0px;
+}
+.sub_item1 p,
+.sub_item2 p,
+.sub_item3 p {
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin: 2px 0px;
+}
+
+.item_5 {
+    background: green;
+    grid-area: calendar;
+}
+
+.item_6 {
+    background: yellow;
+    grid-area: week;
+}
+
+.item_7 {
+    background: gray;
+    grid-area: producDesing;
+}
+
+.item_8 {
+    background: violet;
+    grid-area: timeline;
+}
