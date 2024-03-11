@@ -7,7 +7,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(11, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     grid-gap: 8px;
 
     grid-auto-rows: 1fr;
@@ -21,6 +21,7 @@ body {
         "week week week week sales sales sales sales sales calendar calendar  "
         "week week week week sales sales sales sales sales calendar calendar  "
 
+        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline "
         "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline "
         "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline "
         "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline "
@@ -651,8 +652,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-transform: capitalize;
@@ -704,7 +705,116 @@ body {
 .item_7 {
     background: gray;
     grid-area: producDesing;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 10px 20px;
 }
+.item_7__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    
+
+}
+.item_7__header div h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    font-size: 1.3em;
+    margin-bottom: 7px;
+    margin-top: 0px;
+    
+
+}
+.item_7__header p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    
+    text-transform: capitalize;
+    font-size: 0.8em;
+}
+.item_7__header ion-icon{
+    color:  #D4ED64;
+
+
+}
+.item_7__body{
+    display: flex;
+    gap: 8px;
+    margin: 0px;
+}
+.item_7__body p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 10px;
+    text-transform: capitalize;
+    font-size: 0.7em;
+
+}
+.item_7__body div:first-child{
+    background: #FFFE94;
+    
+}
+.item_7__body div:last-child{
+    background: #D8F266;
+    
+}
+
+.item_7__body div{
+    border-radius: 5px;
+
+}
+.item_7__footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item_7__footer div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+.item_7__footer__foto_1 {
+    background: rgb(233, 238, 150);
+    
+}
+.item_7__footer__foto_2 {
+    background: #D8F266;
+
+}
+
+.item_7__footer__foto_1,
+.item_7__footer__foto_2{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+}
+.item_7__footer__icono_editar,
+.item_7__footer__icono_irAfuera{
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.item_7__footer__icono_editar,
+.item_7__footer__icono_irAfuera{
+    border: 1px solid black;
+    margin: 0px 2px;
+   
+}
+
 
 .item_8 {
     background: violet;
