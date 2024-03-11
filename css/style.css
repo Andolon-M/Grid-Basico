@@ -2,7 +2,13 @@
 
 body {
     background: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
+
+
 
 .container {
     display: grid;
@@ -36,6 +42,8 @@ body {
     border-radius: 5px;
     box-shadow: var(--color-principal);
 }
+
+
 
 .container>div {
     border-radius: 8px;
@@ -812,11 +820,28 @@ body {
 .item_7__footer__icono_irAfuera{
     border: 1px solid black;
     margin: 0px 2px;
-   
+    
 }
 
 
 .item_8 {
     background: violet;
     grid-area: timeline;
+    overflow:hidden;
+    padding: 10px;
+    
+
+
+}
+.item_8 img{
+    height: 100%;
+    object-fit: fill;
+}
+.mi-nombre{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    
+    text-transform: capitalize;
+    font-size: 0.8em;
 }
