@@ -6,21 +6,24 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
     grid-gap: 8px;
 
     grid-auto-rows: 1fr;
     grid-template-areas:
-        "menu menu menu menu menu menu menu menu menu menu menu menu"
-        "notificatins notificatins notificatins notificatins sales sales sales sales sales balance balance balance"
-        "notificatins notificatins notificatins notificatins sales sales sales sales sales balance balance balance"
-        "week week week week sales sales sales sales sales balance balance balance "
-        "week week week week sales sales sales sales sales calendar calendar calendar "
-        "week week week week sales sales sales sales sales calendar calendar calendar "
-        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline timeline"
-        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline timeline"
-        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline timeline"
+        "menu menu menu menu menu menu menu menu menu menu menu "
+        "notificatins notificatins notificatins notificatins sales sales sales sales sales balance balance "
+        "notificatins notificatins notificatins notificatins sales sales sales sales sales balance balance "
+        "notificatins notificatins notificatins notificatins sales sales sales sales sales balance balance  "
+        "week week week week sales sales sales sales sales balance balance  "
+        "week week week week sales sales sales sales sales calendar calendar  "
+        "week week week week sales sales sales sales sales calendar calendar  "
+        "week week week week sales sales sales sales sales calendar calendar  "
+
+        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline "
+        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline "
+        "producDesing producDesing producDesing producDesing producDesing producDesing timeline timeline timeline timeline timeline "
 
     ;
 
@@ -32,18 +35,20 @@ body {
     border-radius: 5px;
     box-shadow: var(--color-principal);
 }
-.container > div {
+
+.container>div {
     border-radius: 8px;
     background: var(--color-secundary);
 }
 
 .item_1 {
-   
+
     grid-area: menu;
     display: flex;
     justify-content: space-between;
-    
+
 }
+
 .item_1 div {
     display: flex;
     flex-wrap: wrap;
@@ -51,6 +56,7 @@ body {
     align-items: center;
     width: 50%;
 }
+
 .item_1 div ul {
     display: flex;
     gap: 1em;
@@ -58,6 +64,7 @@ body {
     width: max-content;
 
 }
+
 .item_1 div ul li {
     display: flex;
     justify-content: left;
@@ -65,55 +72,67 @@ body {
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .item_1 div ul li input {
     list-style: none;
     width: 7em;
     padding: 5px;
-    
+
     border-radius: 5px;
     border: none;
     background: var(--color-primary);
 
 }
+
 .search-container {
     position: relative;
 }
+
 .campobusqueda[type="text"] {
-    padding-right: 30px; /* Ajusta el espacio para el icono */
+    padding-right: 30px;
+    /* Ajusta el espacio para el icono */
 }
+
 .lupa {
     position: absolute;
     top: 50%;
-    right: 10px; /* Ajusta la posición del icono */
+    right: 10px;
+    /* Ajusta la posición del icono */
     transform: translateY(-50%);
 }
+
 .item_1 div:last-child {
-    background:  linear-gradient(90deg, rgb(139 216 241), rgb(211 235 99));
-    
+    background: linear-gradient(90deg, rgb(139 216 241), rgb(211 235 99));
+
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
 .item_1 div:last-child div {
     padding: 0 17px;
     width: max-content;
     background: none;
 }
-.item_1 div:last-child ul li ion-icon{
+
+.item_1 div:last-child ul li ion-icon {
     font-size: 1.3em;
 }
-.item_1 div:last-child div div{
+
+.item_1 div:last-child div div {
     display: flex;
     flex-direction: column;
     align-items: end;
     width: max-content;
     margin: 0 5px;
 }
+
 .item_1 div:last-child div div h1 {
     font-size: 1em;
     text-transform: capitalize;
     margin-bottom: 1px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .item_1 div:last-child div div small {
     font-size: 0.6em;
     margin-bottom: 1px;
@@ -123,7 +142,7 @@ body {
 
 
 
-.item_2 { 
+.item_2 {
     background: rgb(134 215 248) !important;
     grid-area: notificatins;
     overflow: hidden;
@@ -131,6 +150,7 @@ body {
     padding: 8px 20px;
     object-fit: fill;
 }
+
 .container__item_2 {
     display: grid;
     grid-template-columns: 70% 15% 15%;
@@ -145,37 +165,43 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    
+
 }
-.item-2-hora{
+
+.item-2-hora {
     grid-area: hora;
     background: transparent;
 }
-.item-2-hora p{
+
+.item-2-hora p {
     font-size: 0.7em;
-    margin-bottom:  0px;
+    margin-bottom: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-transform: capitalize;
 }
-.item-2-titulo{
+
+.item-2-titulo {
     grid-area: titulo;
     background: transparent;
 }
-.item-2-titulo h1{
+
+.item-2-titulo h1 {
     font-size: 0.8em;
     text-transform: capitalize;
     margin-bottom: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.item-2-fotos{
+
+.item-2-fotos {
     grid-area: fotos;
     background: transparent;
     display: flex;
     flex-wrap: wrap;
     justify-content: cestartnter;
 }
-.item-2-fotos div{
+
+.item-2-fotos div {
     font-size: 0.1em;
     width: 35px;
     height: 35px;
@@ -183,31 +209,36 @@ body {
     font-weight: bold;
     text-transform: capitalize;
     color: white;
-    
+
     border-radius: 100%;
-    
+
 }
+
 .foto1 {
     background: rgb(236, 227, 92);
     z-index: 1;
-    
+
 }
+
 .foto2 {
     background: rgb(209, 200, 70);
     z-index: 2;
 }
+
 .foto3 {
     background: black;
     z-index: 3;
 }
-.item-2-menu{
+
+.item-2-menu {
     grid-area: menu;
     background: transparent;
     display: flex;
     justify-content: center;
     padding-top: 15px;
 }
-.item-2-notificaciones{
+
+.item-2-notificaciones {
     grid-area: notificaciones;
     background: transparent;
     display: flex;
@@ -215,7 +246,8 @@ body {
     padding-right: 15px;
     justify-content: end;
 }
-.item-2-notificaciones p{
+
+.item-2-notificaciones p {
     font-size: 0.8em;
     height: 35px;
     width: 35px;
@@ -234,14 +266,15 @@ body {
 .item_3 {
     background: orange;
     grid-area: sales;
-    
+
     overflow: hidden;
     display: flex;
     flex-direction: column;
-   
+
     padding: 10px 20px;
     object-fit: fill;
 }
+
 .titulo__ventas {
     font-size: 1.3em;
     text-transform: capitalize;
@@ -257,27 +290,31 @@ body {
     width: 100%;
 }
 
-.item_3 div h2{
+.item_3 div h2 {
     font-size: 1.4rem;
 }
-.item_3 div p{
+
+.item_3 div p {
     font-size: 0.9rem;
 }
+
 .item_3 div h2,
-.item_3 div p{
-    color :gray;
+.item_3 div p {
+    color: gray;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     text-transform: capitalize;
     margin-top: 20px;
     margin-bottom: 0px;
 }
+
 .saldo {
     font-size: 1.8em;
     text-transform: uppercase;
     margin-bottom: 1px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .estado {
     display: flex;
     align-items: end;
@@ -289,65 +326,81 @@ body {
     color: rgb(255, 196, 0);
 
 }
-.estado ion-icon{
+
+.estado ion-icon {
     font-size: 0.8em;
     margin-bottom: 5px;
 }
-.item_3__balance{
+
+.item_3__balance {
     width: 100%;
     height: 50px;
     display: grid;
     grid-template-columns: 1.5fr 0.8fr 1.5fr 2fr 1.3fr 0.8fr 1.3fr;
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas:
-    "sunday monday tuesday wednesday thursday friday saturday"
+        "sunday monday tuesday wednesday thursday friday saturday"
 
     ;
 }
 
 .sunday {
     grid-area: sunday;
-    
+
 }
-.sunday div{
-   background: rgb(183 251 200);;
-   
+
+.sunday div {
+    background: rgb(183 251 200);
+    ;
+
 }
+
 .monday {
     grid-area: monday;
 }
-.monday div{
+
+.monday div {
     background: #88EA88;
-    
- }
+
+}
+
 .tuesday {
     grid-area: tuesday;
 }
-.tuesday div{
+
+.tuesday div {
     background: #D7F065;
 }
+
 .wednesday {
     grid-area: wednesday;
 }
-.wednesday div{
+
+.wednesday div {
     background: #87D8F9;
 }
+
 .thursday {
     grid-area: thursday;
 }
-.thursday div{
+
+.thursday div {
     background: #CFEE75;
 }
+
 .friday {
     grid-area: friday;
 }
-.friday div{
+
+.friday div {
     background: black;
 }
+
 .saturday {
     grid-area: saturday;
 }
-.saturday div{
+
+.saturday div {
     background: #CFEE75;
 }
 
@@ -358,15 +411,16 @@ body {
 .thursday,
 .friday,
 .saturday {
-   
-    
+
+
     object-fit: contain;
     overflow: hidden;
     height: 100%;
     margin-bottom: 20px;
     flex-direction: row;
-    
-    align-content: space-between; /* Espacio entre los contenedores */
+
+    align-content: space-between;
+    /* Espacio entre los contenedores */
 }
 
 .sunday div,
@@ -375,7 +429,7 @@ body {
 .wednesday div,
 .thursday div,
 .friday div,
-.saturday div{
+.saturday div {
     width: 100%;
     height: 50%;
 }
@@ -389,22 +443,23 @@ body {
 .saturday h3 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.6em;
-    color: #333; /* Color del texto */
+    color: #333;
+    /* Color del texto */
     padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 0px ;
+    margin: 0px 0px;
     text-transform: capitalize;
     font-weight: lighter;
 }
 
-.date_sales{
+.date_sales {
     width: 100;
     height: 10px;
     display: flex;
     justify-content: center;
-    color :gray;
+    color: gray;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     text-transform: capitalize;
@@ -421,33 +476,37 @@ body {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: 
-    "sub_item1"
-    "sub_item2"
-    "sub_item3"
+    grid-template-areas:
+        "sub_item1"
+        "sub_item2"
+        "sub_item3"
     ;
 }
-.item_4 div{
+
+.item_4 div {
     padding: 5px 10px;
+    margin: 3px 0px;
 }
 
-.sub_item1{
+.sub_item1 {
     grid-area: sub_item1;
     display: flex;
     flex-direction: column;
 
 }
-.sub_item2{
+
+.sub_item2 {
     grid-area: sub_item2;
     display: flex;
     flex-direction: column;
-    background: #BCE897;
+    background: #bce897;
     border-radius: 8px;
 }
-.sub_item3{
+
+.sub_item3 {
     grid-area: sub_item3;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .sub_item1 h1,
@@ -458,23 +517,188 @@ body {
     font-size: 1rem;
     margin: 4px 0px;
 }
+
 .sub_item1 p,
-.sub_item2 p,
 .sub_item3 p {
-    color: gray;
+    color: rgb(88, 88, 88);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8rem;
+    font-weight: bold;
+    font-size: 0.65rem;
     margin: 2px 0px;
 }
 
+.sub_item2 p {
+    color: rgb(10, 10, 10);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.6rem;
+    margin: 2px 0px;
+    font-weight: bold;
+}
+
 .item_5 {
-    background: green;
+    background: #D7F065 !important;
     grid-area: calendar;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+}
+
+.item_5 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+
+.item_5 h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.item_5 span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.6rem;
+    margin: 2px 0px;
+    font-weight: bold;
+    text-transform: capitalize;
+    background: var(--color-secundary);
+    padding: 3px;
+}
+
+.item_5_footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.item_5_footer div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.icono-irAfuera {
+    transform: rotate(45deg);
+}
+
+.item_5_foto1 {
+
+    width: 25px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    background: rgb(233, 238, 150);
+    border-radius: 100%;
+}
+
+.item_5_foto2 {
+
+    width: 25px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    background: rgb(0, 0, 0);
+    border-radius: 100%;
 }
 
 .item_6 {
     background: yellow;
     grid-area: week;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    overflow: hidden;
+}
+
+.item_6__sub_item_1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+    align-items: center;
+    width: 100%;
+}
+.item_6__sub_item_1__sub_item_2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    
+}
+.item_6_icono1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    background: rgb(233, 238, 150);
+    border-radius: 100%;
+}
+.item_6_icono_2 {
+
+    width: 25px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    background: rgb(134 215 248) !important;
+
+    border-radius: 100%;
+}
+.item_6_icono1,
+.item_6_icono_2{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item_6 div:first-child p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-size: 0.8em;
+
+}
+
+.item_6 div:first-child h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    text-transform: capitalize;
+    font-size: 1.6em;
+}
+
+.item_6 div img {
+    width: 100%;
+
 }
 
 .item_7 {
