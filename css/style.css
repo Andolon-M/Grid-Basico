@@ -3,9 +3,7 @@
 body {
     background: var(--color-primary);
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+    
 }
 
 
@@ -35,7 +33,7 @@ body {
     ;
 
     width: 850px;
-    height: 550px;
+    height: 650px;
     margin: 15px auto;
     background: var(--color-principal);
     border-radius: 1px solid var(--color-principal);
@@ -112,19 +110,25 @@ body {
 
 .item_1 div:last-child {
     background: linear-gradient(90deg, rgb(139 216 241), rgb(211 235 99));
-
+    overflow: hidden;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    
 }
 
 .item_1 div:last-child div {
     padding: 0 17px;
-    width: max-content;
+    width: auto;
     background: none;
+    display: flex;
+    justify-content: end;
+    display: flex;
+    
 }
 
 .item_1 div:last-child ul li ion-icon {
     font-size: 1.3em;
+    object-fit: fill;
 }
 
 .item_1 div:last-child div div {
@@ -136,7 +140,7 @@ body {
 }
 
 .item_1 div:last-child div div h1 {
-    font-size: 1em;
+    font-size: 1rem;
     text-transform: capitalize;
     margin-bottom: 1px;
     font-family: Arial, Helvetica, sans-serif;
@@ -829,19 +833,70 @@ body {
     grid-area: timeline;
     overflow:hidden;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 
 
 }
 .item_8 img{
-    height: 100%;
-    object-fit: fill;
+    height: 90%;
+    object-fit: cover;
 }
+/*
 .mi-nombre{
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 10px;
-    margin-top: 0px;
+    display:flex;
+    justify-content:center;
     
+    width: 100%;
     text-transform: capitalize;
     font-size: 0.8em;
+}*/
+
+@media (width <= 787px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows:  115px 108px 275px 187px 153px 214px 299px;
+        /* Eliminar grid-gap o reducir su valor */
+        grid-gap: 4px;
+    
+        /* Simplificar la disposición de las áreas */
+        grid-template-areas:
+            "menu menu"
+            "notificatins notificatins" 
+           
+            
+            
+            "week week"
+            
+            
+            "balance calendar"
+           
+            
+            
+            "producDesing producDesing"
+           
+
+            "timeline timeline"
+           
+
+            "sales sales"
+           
+            ;
+    
+        /* Utilizar unidades de medida flexibles */
+        width: 90vw; /* Porcentaje del ancho de la pantalla */
+        
+        margin: 15px auto;
+        background: var(--color-principal);
+        border-radius: 5px;
+        box-shadow: var(--color-principal);
+    }
+    
+    
 }
+
